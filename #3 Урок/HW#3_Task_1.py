@@ -9,24 +9,24 @@ def date_input(y,z):
         if x[2] % 4 == 0: # проверка на високосный год
             if x[0] > 29 or x[0] < 0: # условие для високсного года
                 y = "FAILED"
-                z = "Incorrect month"
+                z = "Incorrect day"
             else:
                 y = "OK"
         elif x[0] > 28 or x[0] < 0: # условие для обычного года
             y = "FAILED"
-            z = "Incorrect month"
+            z = "Incorrect day"
         else:
             y = "OK"
     elif x[1] > 0 and x[1] <= 7 and x[1] % 2 != 0 or x[1] > 7 and x[1] <= 12 and x[1] % 2 == 0: # проверка на месяц с 31 днем
         if x[0] > 31 or x [0] < 0:
             y = "FAILED"
-            z = "Incorrect month"
+            z = "Incorrect day"
         else:
             y = "OK"
     elif x[1] > 0 and x[1] <= 7 and x[1] % 2 == 0 or x[1] > 7 and x[1] <= 12 and x[1] % 2 != 0: # проверка на месяц с 30 днями
         if x[0] > 30 or x[0] < 0:
             y = "FAILED"
-            z = "Incorrect month"
+            z = "Incorrect day"
         else:
             y = "OK"
     return y,z
