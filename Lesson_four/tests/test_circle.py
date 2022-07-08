@@ -4,6 +4,9 @@ import pytest
 def test_correct_perimeter():
     assert perimeter_circle(2) == 12.566370614359172
 
-def test_correct_perimeter():
+def test_correct_square():
     assert square_circle(2) == 12.566370614359172
 
+def test_correct_input():
+    with pytest.raises(Exception):
+        perimeter_rectangle(-2)
