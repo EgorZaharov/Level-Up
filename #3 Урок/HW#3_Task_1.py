@@ -6,8 +6,14 @@ def date_input(y,z):
         y = "FAILED"
         z = "Incorrect month"
     if x[1] == 2: # проверка на февраль
-        if x[2] % 4 == 0: # проверка на високосный год
-            if x[0] > 29 or x[0] < 0: # условие для високсного года
+        if x[2] % 400 == 0: # проверка на високосный год
+            if x[0] > 29 or x[0] < 0:  # условие для високсного года
+                y = "FAILED"
+                z = "Incorrect day"
+            else:
+                y = "OK"
+        elif x[2] % 4 == 0 and x[2] % 100 != 0:
+            if x[0] > 29 or x[0] < 0:  # условие для високсного года
                 y = "FAILED"
                 z = "Incorrect day"
             else:
