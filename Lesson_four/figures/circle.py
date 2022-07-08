@@ -2,6 +2,8 @@ import math
 def is_correct(r):
     if r < 0:
         raise Exception("Error")
+    elif r == 0:
+        raise Exception("Такой фигуры не существует")
 
 def perimeter_circle(r):
     is_correct(r)

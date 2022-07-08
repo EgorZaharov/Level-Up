@@ -1,6 +1,8 @@
 def is_correct(a,b,c):
     if a < 0 or b < 0 or c < 0:
         raise Exception("Error")
+    elif a == 0 or b == 0 or c == 0:
+        raise Exception("Такой фигуры не существует")
 
 def perimeter_triangle(a,b,c):
     is_correct(a,b,c)
