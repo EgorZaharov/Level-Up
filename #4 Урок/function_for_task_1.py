@@ -1,4 +1,4 @@
-def search_values(x1, x2, discriminant):
+def search_values(x1, x2, discriminant, a, b, c):
     a = int(input("Введите коэффициент А:"))
     b = int(input("Введите коэффициент B:"))
     c = int(input("Введите коэффициент C:"))
@@ -10,4 +10,4 @@ def search_values(x1, x2, discriminant):
         x2 = (-b - discriminant ** 0.5) / (2 * a)
     elif discriminant == 0:
         x1 = -b / (2 * a)
-    return x1, x2, discriminant
+    return x1, x2, discriminant, a, b, c
