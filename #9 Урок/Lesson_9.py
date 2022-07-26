@@ -50,14 +50,44 @@
 
 # Словари
 # Task 4 - Два списка
-a = list(input().split())
-b = list(input().split())
-my_dict = dict(zip(a, b))
+# a = list(input().split())
+# b = list(input().split())
+# my_dict = dict(zip(a, b))
+#
+# print(my_dict)
 
-print(my_dict)
+# Task 5 - Три списка
 
+# student_ids = list(input("Введите ID студента:").split())
+# student_names = list(input("Введите имя студента:").split())
+# student_grades = list(input("Введите бал студента:").split())
+#
+# students = []
+#
+# for i in range(len(student_ids)):
+#     my_dict = {student_ids[i]:{student_names[i]:student_grades[i]}}
+#     students.append(my_dict)
+#
+# print(my_dict)
 
+# Task Эрудит
+my_dict = {
+    1 : ['A', 'E', 'I', 'L', 'N', 'O', 'R', 'S', 'T', 'U'],
+    2 : ['D', 'G'],
+    3 : ['B', 'C', 'M', 'P'],
+    4 : ['F', 'H', 'V', 'W', 'Y'],
+    5 : ['K'],
+    8 : ['J', 'X'],
+    10 : ['Q', 'Z']
+}
 
+scrabble = input("Введите слово:")
+scrabble.upper()
+scrabble_new = list(scrabble.upper())
+x = []
+for n in my_dict:
+    for i in scrabble_new:
+        if i in my_dict[n]:
+           x.append(n)
 
-
-
+print(sum(x))
