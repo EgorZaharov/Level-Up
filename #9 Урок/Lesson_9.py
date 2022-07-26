@@ -20,22 +20,42 @@
 # a = isSublist(x, y)
 # print(a)
 
-# Task 3
+# Task 3 - Вараинт 1
 
-def my_set(x):
-    if len(x) <= 1:
-        yield x
-        yield []
-    else:
-        for i in my_set(x[1:]):
-            yield [x[0]]+i
-            yield i
+# def my_set(x):
+#     if len(x) <= 1:
+#         yield x
+#         yield []
+#     else:
+#         for i in my_set(x[1:]):
+#             yield [x[0]]+i
+#             yield i
+#
+# my_list = list(input().split())
+# item = [x for x in my_set(my_list)]
+#
+# item.sort()
+# print (item)
 
-my_list = list(input().split())
-item = [x for x in my_set(my_list)]
+# Task 3 - Вараинт 2
+# def all_subset(data):
+#     subsets = [[]]
+#     for i in range(len(data)):
+#         for j in range(len(subsets)):
+#             new_subset = subsets[j] + [data[i]]
+#             subsets = subsets + [new_subset]
+#     return subsets
+#
+# print (all_subset([1,2,3]))
 
-item.sort()
-print (item)
+# Словари
+# Task 4 - Два списка
+a = list(input().split())
+b = list(input().split())
+my_dict = dict(zip(a, b))
+
+print(my_dict)
+
 
 
 
