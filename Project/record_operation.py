@@ -5,7 +5,6 @@ from decoding_data import decoding_operation
 data = find_value()
 data_1 = decoding_operation()
 
-print(data_1)
 book = openpyxl.Workbook()
 sheet = book.active
 
@@ -59,3 +58,5 @@ for i in data_1:
 
 book.save("technology.xlsx")
 book.close()
+
+print("Файл technology.xlsx записан")

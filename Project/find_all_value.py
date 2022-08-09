@@ -1,7 +1,7 @@
 import openpyxl
-
+id_route = input("Введите ID маршрута: ")
 def find_value():  # нахождение всех значений в строке
-    id_route = input("Введите ID маршрута: ")
+
     book = openpyxl.open("ValueStreamMapping.xlsx", read_only=True)
     sheet_4 = book.worksheets[4]
 

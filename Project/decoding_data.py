@@ -1,6 +1,6 @@
 from find_value_operation import find_value_without
 
-def decoding_operation():
+def decoding_operation(): #Декодирует список кодов до элементов
     data = find_value_without()
 
     data_1 = []
