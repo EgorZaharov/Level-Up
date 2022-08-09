@@ -20,8 +20,8 @@ sheet['G1'] = 'ЦЕНА за комплект'
 sheet['H1'] = '№ ОПЕРАЦИИ'
 sheet['I1'] = 'НАИМЕНОВАНИЕ ОПЕРАЦИИ'
 sheet['J1'] = 'ОБОРУДОВАНИЕ'
-sheet['K1'] = 'Тпз'
-sheet['L1'] = 'Тшт'
+sheet['K1'] = 'Тпз, мин'
+sheet['L1'] = 'Тшт, мин'
 sheet['M1'] = 'КОИД'
 
 #Заполнение общей части информации о детали
@@ -40,24 +40,22 @@ sheet['E2'].value = 50 * sheet['D2'].value
 row = 2
 for i in data_1:
     if len(i) > 6:
-        sheet[row][10] = i[3]
-        sheet[row][11] = i[4]
-        sheet[row][12] = i[5]
+        sheet[row][10].value = i[3]
+        sheet[row][11].value = i[4]
+        sheet[row][12].value = i[5]
     elif len(i) <= 3:
-        sheet[row][10] = i[1]
-        sheet[row][11] = i[2]
-        sheet[row][7] = i[0]
+        sheet[row][10].value = i[1]
+        sheet[row][11].value = i[2]
+        sheet[row][7].value = i[0]
     elif len(i) > 3 and len(i) <= 6:
-        sheet[row][10] = i[1]
-        sheet[row][11] = i[2]
-        sheet[row][7] = i[0]
-        sheet[row+1][10] = i[4]
-        sheet[row+1][11] = i[5]
-        sheet[row+1][7] = i[3]
+        sheet[row][10].value = i[1]
+        sheet[row][11].value = i[2]
+        sheet[row][7].value = i[0]
+        sheet[row+1][10].value = i[4]
+        sheet[row+1][11].value = i[5]
+        sheet[row+1][7].value = i[3]
+        row += 1
     row += 1
-# sheet['K2'].value =
-# sheet['L2'].value =
-# sheet['M2'].value =
 
 book.save("technology.xlsx")
 book.close()
