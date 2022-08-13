@@ -14,5 +14,7 @@ def find_value():  # нахождение всех значений в стро�
     my_list = []
     for cell in sheet_4[number_stroke]:
         my_list.append(cell.value)
+
     book.close()
     return my_list
+
